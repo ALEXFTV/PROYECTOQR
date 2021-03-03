@@ -1,0 +1,233 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FTV</title>
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+   </head>
+   <body>
+      <div id="header" class="header">
+         <nav class="navbar navbar-expand-lg navbar-light text-capitalize">
+            <div class="container">
+               <a class="navbar-brand" href="#"><img src="{% static 'imgs/logo.png' %}" width="50px" height="50px" alt="#" /></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="show-menu">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#home">Pagina Principal</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#about">Codigo QR</a>
+                     </li>
+                     
+                     <li class="nav-item">
+                        <a class="nav-link" href="#service">Servicios</a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#hiw">Galeria</a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                     </li>
+                     
+                  </ul>
+                  <ul>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Ingresar al Sistema</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div id="home" class="slider">
+         <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+               <li data-target="#main_slider" data-slide-to="1"></li>
+               <li data-target="#main_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img class="d-block w-100" src="{% static 'imgs/c.jpg' %}" alt="slider_img" width="400px"  height="900px">
+                  <div class="ovarlay_slide_cont">
+                     <h2>NOS ENCANTA TRABAJAR</h2>
+                     <h4>CONTROL DE MASCOTAS</h4>
+                     <p>Cuidamos del bien estar de tu mascota con altos parámetros de salud especializado para los consentidos del hogar. </p>
+                     <a class="blue_bt" href="#">Descripción de servicios.</a>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100" src="{% static 'imgs/b.jpg' %}" alt="slider_img" width="400px"  height="900px">
+                  <div class="ovarlay_slide_cont">
+                     <h2>NOS ENCANTA TRABAJAR</h2>
+                     <h4>SERVICIO DE PELUQUERIA</h4>
+                     <p>Trabajamos con la finalidad de dar precaución a posibles pérdidas de tus mascotas por sabes lo que ellos significan para ti. </p>
+                     <a class="blue_bt" href="#">Descripción de servicios.</a>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <img src="{% static 'imgs/left.png' %}" alt="#" />
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <img src="{% static 'imgs/right.png' %}" alt="#" />
+            </a>
+         </div>
+      </div>
+      <div id="about" class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5">
+                  <h4>Rastreo mediante código QR</h4>
+                  <h3 style="text-transform: none !important">Como funciona: </h3>
+                  <p>Nosotros nos preocupamos por la seguridad de las mascotas pues conocemos el rol q cumplen dentro de cada uno de los hogares por lo tano a medida de la creciente perdida de nuestras mascotas diseñamos un método de localización mediante la información suministrada por el dueño de la mascota previamente con la finalidad de q esta sea visible mediante la generación de un código QR la misma q contiene la información del dueño como:  dirección, teléfono, nombres, etc.</p>
+               </div>
+               <div class="col-md-6 offset-md-1">
+                  <div class="full text_align_center">
+                     <img class="img-responsive" src="{% static 'imgs/a2.png' %}" alt="#" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="hiw" class="hiw_section layout_padding" style="background: #696969;">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-7">
+                  <h3 class="white_font">Valores que nos identifican </h3>
+                  <p class="white_font">Fomentamos los valores principales para el correcto cuidado de nuestras mascotas. </p>
+               </div>
+               <div class="col-md-5">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/b1.png' %}" alt="#" />
+                  <h3 class="blog_head">Amor</h3>
+               </div>
+               <div class="col-md-4">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/b2.png' %}" alt="#" />
+                  <h3 class="blog_head">Cuidado</h3>
+               </div>
+               <div class="col-md-4">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/b3.png' %}" alt="#" />
+                  <h3 class="blog_head">Responsabilidad</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="service" class="hiw_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-7">
+                  <h3>OTROS SERVICIOS</h3>
+                  <p>Contamos con los mejores especialistas para el cuidado de tu mascota</p>
+               </div>
+               <div class="col-md-5">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 service_blog">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/r1.jpg' %}" alt="#" />
+                  <h3 class="blog_head">Especialistas </h3>
+               </div>
+               <div class="col-md-4 service_blog">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/r2.jpg' %}" alt="#" />
+                  <h3 class="blog_head">Revisión Preventiva</h3>
+               </div>
+               <div class="col-md-4 service_blog">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/r3.jpg' %}" alt="#" />
+                  <h3 class="blog_head">Medicación</h3>
+               </div>
+               <div class="col-md-4 service_blog">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/r4.jpg' %}" alt="#" />
+                  <h3 class="blog_head">Cirugía</h3>
+               </div>
+               <div class="col-md-4 service_blog">
+                  <img class="margin_top_30 img-responsive" src="{% static 'imgs/r5.jpg' %}" alt="#" />
+                  <h3 class="blog_head">Vacunación</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <footer>
+         <div id="contactos" class="container" style="background: #9b9a9a;">
+            <div class="row">
+               <div class="col-lg-3 col-md-6 col-12">
+                  <div class="footer_blog_section">
+                     <img src="{% static 'imgs/logo.png' %}" width="50px" height="50px" alt="#" />
+                     <p style="margin-top: 5px;">La salud de tus mascotas es nuestra prioridad contamos con los mejores servicios y tarifas para que tú cuides de ellos.</p>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-6 col-12">
+                  <div class="item">
+                     <h4 class="text-uppercase">Navegación</h4>
+                     <ul>
+                        <li><a href="#home">Pagina Principal</a></li>
+                        <li><a href="#about">Codigo QR</a></li>
+                        <li><a href="#service">Servicios</a></li>
+                        <li><a href="#hiw">Galeria</a></li>
+                        <li><a href="#contactos">Contactos</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-12">
+                  <div class="item">
+                     <h4 class="text-uppercase">Contactos</h4>
+                     <p><strong>Dirección de la oficina corporativa:</strong></p>
+                     <p><img src="{% static 'imgs/location.png' %}" alt="#" /> 1234 Quito Sur, QS 36524</p>
+                     <p><strong>Servicio al Cliente:</strong></p>
+                     <p><img src="{% static 'imgs/phone_icon.png' %}" alt="#" /> 0987 654 321</p>
+                  </div>
+               </div>
+               
+         </div>
+         <div class="copyright text-center">
+            <p>Copyright &copy; 2020  <a href="https://www.facebook.com/VDJALEXFTV/">AlexFtv</a>.</strong> All rights
+               reserved.</a></p>
+         </div>
+      </footer>
+      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script>
+         $(function () {
+             
+             'use strict';
+             
+             var winH = $(window).height();
+             
+             $('header').height(winH);  
+             
+             $('header .container > div').css('top', (winH / 2) - ( $('header .container > div').height() / 2));
+             
+             $('.navbar ul li a.search').on('click', function (e) {
+                 e.preventDefault();
+             });
+             $('.navbar a.search').on('click', function () {
+                 $('.navbar form').fadeToggle();
+             });
+             
+             $('.navbar ul.navbar-nav li a').on('click', function (e) {
+                 
+                 var getAttr = $(this).attr('href');
+                 
+                 e.preventDefault();
+                 $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+             });
+         })
+      
+      </script>
+
+   </body>
+</html>
