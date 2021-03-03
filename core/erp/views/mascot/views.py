@@ -191,7 +191,7 @@ class MascotInvoicePdfView(View):
             template = get_template('mascot/envoice.html')
             context = {
                 'sale': Mascot.objects.get(pk=self.kwargs['pk']),
-                'comp': {'name': 'ALGORISOFT S.A.', 'ruc': '9999999999999', 'address': 'Milagro, Ecuador'},
+                
                 'icon': '{}{}'.format(settings.MEDIA_URL, 'logo.png')
             }
             html = template.render(context)
